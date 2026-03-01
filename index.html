@@ -1,18 +1,19 @@
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-image: url('https://raw.githubusercontent.com/zong771015/meow-meow-home/refs/heads/main/room-background.png.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Segoe UI', sans-serif;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('https://raw.githubusercontent.com/zong771015/meow-meow-home/main/room-background.png.png');
+  background-size: cover;           /* 填滿螢幕，保持比例，邊緣可能裁切 */
+  background-position: center center; /* 置中顯示 */
+  background-repeat: no-repeat;
+  background-attachment: fixed;     /* 滾動時固定（更好看） */
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
   .room {
     position: relative;
