@@ -3,10 +3,10 @@
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url('https://raw.githubusercontent.com/zong771015/meow-meow-home/main/room-background.png');  /* ← 改成你的圖片路徑 */
-    background-size: cover;          /* 圖片填滿整個螢幕 */
-    background-position: center;     /* 置中顯示 */
-    background-repeat: no-repeat;    /* 不重複 */
+    background-image: url('https://raw.githubusercontent.com/zong771015/meow-meow-home/main/room-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: 'Segoe UI', sans-serif;
     overflow: hidden;
     display: flex;
@@ -17,12 +17,41 @@
   .room {
     position: relative;
     width: 90%;
-    max-width: 1200px;               /* 可以調大一點，讓房間看起來更寬敞 */
+    max-width: 1200px;
     height: 90%;
-    /* background: rgba(255,255,255,0.1); */  /* 如果想加半透明覆蓋層，可取消註解 */
+    background: transparent;           /* 讓 .room 變透明，只顯示底圖 */
     border-radius: 20px;
     overflow: hidden;
   }
 
-  /* 其他樣式保持原樣，例如 .cat, .tv 等 */
+  /* 保留原本的貓和電視樣式（可之後再調整位置） */
+  .cat {
+    position: absolute;
+    bottom: 20%;
+    left: 40%;
+    font-size: 120px;
+    animation: walk 10s infinite alternate;
+  }
+
+  @keyframes walk {
+    0% { transform: translateX(-50px); }
+    100% { transform: translateX(50px); }
+  }
+
+  .tv {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    width: 160px;
+    height: 90px;
+    background: #000;
+    border: 8px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .tv video {
+    width: 100%;
+    height: 100%;
+  }
 </style>
